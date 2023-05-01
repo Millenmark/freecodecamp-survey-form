@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  color: #191825;
+  font-weight: 500;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff0e5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+  scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.button-name {
+  margin-bottom: 8rem;
+  align-items: center;
+  appearance: none;
+  background-color: #3a10e5;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(119, 79, 207, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#876cf3 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 16px;
+ }
+ 
+ /* .button-name:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ } */
+ 
+ .button-name:hover {
+  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #876cf3 0 -3px 0 inset;
+  transform: translateY(-2px);
+ }
+ 
+ .button-name:active {
+  box-shadow: #876cf3 0 3px 7px inset;
+  transform: translateY(2px);
+ }
+
+ label, p {
+  font-size: 17px;
+ }
+
+ /* From uiverse.io by @alexruix */
+.normal-input, textarea, select {
+  font-size: 15px;
+  margin-top: .6rem;
+  /* margin-bottom: 1.6rem; */
+  width: 95%;
+  border-radius: 1rem;
+  line-height: 28px;
+  border: 2px solid #333;
+  padding: .2rem 0;
+  outline: none;
+  padding: .2rem 1rem;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+ }
+
+ select, input[type="date"] {
+  height: 38px;
+ }
+
+ select optgroup {
+  background-color: #0d0c22;
+ }
+
+ 
+
+ h1 {
+  margin-bottom: 3rem;
+ }
+ textarea {
+  resize: none;
+ }
+ 
+ .normal-input:focus, .normal-input:hover, textarea:focus, textarea:hover {
+  outline: none;
+  /* border-color: #333; */
+ }
+ 
+ .normal-input::placeholder {
+  color: #333;
+ }
+ 
+ .normal-input:focus::placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+ }
+
+
+
+ /* Input radio styles */
+ .radio-input {
+  display: none;
+  padding: none;
+  margin: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Define the custom styles for the label element */
+.radio-label {
+  font-size: 15px;
+  --bg: #e74c3c;
+  position: relative;
+  border: 2px solid #333;
+  /* background: var(--bg); */
+  color: #333;
+  padding: .3rem .5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* transition: all 0.3s ease-in; */
+  border-radius: 5px;
+  opacity: 1;
+  margin: 1rem;
+  letter-spacing: 1px;
+  box-shadow: #333 0px 7px 0px;
+  cursor: pointer;
+}
+
+/* Define the custom styles for the label element when it's selected */
+.radio-input:checked + .radio-label {
+  top: 5px;
+  background-color: #333;
+  color: white;
+  box-shadow: #333 0px 3px 0px;
+}
+
+.header {
+  z-index: 1;
+  background-color: brown;
+  width: 100%;
+  position: fixed;
+}
+
+.container {
+  margin-top: 3rem;
+  width: min(100% - 1rem, 520px);
+  margin-inline: auto;
+  padding: 1rem;
+  padding-top: 4rem;
+}
+
+.footer {
+  background-color: brown;
+}
+
+#page-box {
+  text-align: center;
+}
+
+.page {
+  border-radius: 20px;
+  background-color: white;
+  padding: 1rem;
+  border: solid 4px #333;
+  box-shadow: -5px 5px #333;
+  margin-bottom: 3rem;
+}
+
+.content {
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+
+.radio-question {
+  margin-bottom: .4rem;
+}
+
+#description, .click-description {
+  margin-top: 3rem;
+}
+
+.checkbox-options {
+  width: 90%;
+  margin-inline: auto;
+  border: 2px solid #333;
+  margin-top: .6rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.checkbox-option {
+  height: fit-content;
+}
+
+.checkbox-option:not(:last-child) {
+  border-bottom: 2px solid #333;
+}
+
+.input-checkbox {
+  display: none;
+  appearance: none;
+}
+
+.label-checkbox {
+  font-size: 15px;
+  padding: .5rem .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.input-checkbox:checked + .label-checkbox {
+  background-color: #333;
+  color: white;
+  outline: 2px solid white;
+}
+
+.error {
+  display: none;
+}
+
+
